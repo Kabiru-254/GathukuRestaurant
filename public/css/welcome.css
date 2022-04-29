@@ -38,6 +38,14 @@ header{
     border-bottom: 1px solid var(--accent);
     
 }
+
+#menu-bar{
+    font-size: larger;
+    cursor: pointer;
+    display: none;
+}
+
+
 header .logo{
   
     padding: 5px;
@@ -62,7 +70,8 @@ header .options i{
     margin-right: 10px;
 }
 header .options a:hover{
-    background-color: whitesmoke;
+    border-top: 1px solid var(--accent);
+    border-bottom: 1px solid var(--accent);
     color: var(--primaryDark);
 }
 header .account{
@@ -647,14 +656,15 @@ form textarea:focus{
   
 .btn:hover {
     color:#fff;
-   
+    
 }
 
 .copyright{
     margin-top: 40px;
     color: white;
     padding: 20px;
-    width: 80%;
+    width: 100%;
+    bottom: 0;
     background-color: var(--primaryDark);
     display: flex;
     justify-content: center;
@@ -672,4 +682,82 @@ form textarea:focus{
     color: var(--accent);
     font-weight: 600;
     background-color: var(--primaryDark);
+}
+
+.kol{
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    width: 100%; 
+    flex-direction: row;
+}
+
+
+
+@media(max-width:991px){
+    #menu-bar{
+        display: initial;
+      }
+
+    .options{
+    position: absolute;
+    width: 60%;
+    top: 14%; left: 23%; right: 0;
+    background: #f7f7f7;
+    border: 1px solid var(--primary);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    z-index: 999;
+    }
+    .options.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    .options a{
+    
+    display: block;
+    border:.2rem solid rgba(0,0,0,.1);
+    border-left:.5rem solid var(--accent);
+    background:#fff;
+    }
+    .options a:hover{
+        background-color: var(--accent);
+    }
+
+    .about, .details{
+        width: 100%;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .speciality{
+        margin-top: 50px;
+    }
+
+    form{
+        width: 100%;
+        height: fit-content;
+    }
+
+    form .row{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 100%;
+    }
+    .contact{
+        border-left: 1px solid var(--accent);
+        border-right: 1px solid var(--accent);
+        border-radius: 10%;
+    }
+    .contact .kol{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        
+    }
+    .contact .kol h3{
+        margin: 10px;
+    }
+    
 }

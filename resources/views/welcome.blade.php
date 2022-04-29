@@ -21,12 +21,17 @@
            <div class="logo">
                <a href=""><i class="fas fa-cocktail fa-2x"></i>Manjivaa</a>
            </div>
-           <div class="options">
+
+           <div id="menu-bar" class="fas fa-bars"></div>
+            
+            <div class="options">
                 <a href="#menus"><i class="fa fa-cutlery "></i> Culinary</a>
                 <a href="#testimonials"><i class="fa-solid fa-comments"></i> Experiences</a>  
                 <a href="#enquire"><i class="fa fa-heart"></i> Enquire</a>
                 <a href="#contact"><i class="fa fa-address-book"></i> Contact us</a>
-           </div>
+           </div>  
+            
+           
            <div class="account">
                 <a href="{{route('register')}}"><i class="fa fa-sign-in fa-lg"></i> Sign Up</a>
                 <a href="{{route('login')}}"><i class="fas fa-sign-in-alt fa-lg"></i> Login</a>
@@ -61,7 +66,7 @@
                         <h2 class="transition">Good food and great vibes.</h2>
                         <p>At Gathuku Restaurant we pride ourselves on providing a fresh experience for catering in Nairobi, Kenya.
                         Our menus are vibrant, contemporary and creative. </p>
-                        <div class="cta-container transition"><a href="#" class="cta">Get Quote</a></div>
+                        <div class="cta-container transition"><a href="#enquire" class="cta">Get Quote</a></div>
                         <div class="card_circle transition"></div>
                     </div>
                 </div>
@@ -247,22 +252,24 @@
 
    <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 50px; width: 100%;">
    <div class="contact" id="contact">
-       <div style="display: flex; align-items: center; justify-content: center; width: 100%; flex-direction: row;">
+       <div class="kol">
        <h3 style="flex-basis: 50%; text-align: center;">Call us at  <span>0724802599</span></h3>
        <h3 style="flex-basis: 50%; ">Email  <span>gathukurestaurant@gmail.com</span></h3>
        </div>
        
        <div class="socials">
-        <a href="#" class="btn"><i class="fa fa-facebook-f"></i> facebook</a>
-        <a href="#" class="btn"><i class="fa fa-twitter" ></i> twitter</a>
-        <a href="#" class="btn"><i class="fa fa-instagram" ></i> instagram</a>
+        <a href="#" class="btn"><i id="social" class="fa fa-facebook-f"></i> facebook</a>
+        <a href="#" class="btn"><i id="social" class="fa fa-twitter" ></i> twitter</a>
+        <a href="#" class="btn"><i id="social" class="fa fa-instagram" ></i> instagram</a>
        </div>
 
-       <div class="copyright">
+       
+   </div>
+   
+   </div>
+   <div class="copyright">
            <p>Copyright 2022 | Gathuku Restaurant | Designed and developed by <span>kabiruworld</span></p>
        </div>
-   </div>
-   </div>
    
           
        <script>
@@ -294,7 +301,17 @@
             slider.oninput = function() {
             output.innerHTML = this.value;
             }
+            
 
+            let menu = document.querySelector('#menu-bar');
+            let navbar = document.querySelector('.options');
+
+            menu.onclick = () =>{
+
+            menu.classList.toggle('fa-times');
+            navbar.classList.toggle('active');
+
+            }
 
             
        </script>
