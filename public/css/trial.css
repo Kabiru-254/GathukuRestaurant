@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,200;1,300;1,400;1,500;1,900&display=swap');
+
+:root{
+    --primaryDark: #E64A19;
+    --primaryLight: #FFCCBC;
+    --primary: #FF5722;
+    --text: #212121;
+    --accent: #E040FB;
+    --other: #757575;
+}
+
+*{
+    background-color: white;
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--primaryDark);
+    text-decoration: none;
+    transition: all 1s ease-in-out;
+}
+.mwili{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0px 0px 0px 0px;
+    flex-direction: column;
+    height: 100vh;
+    
+    
+}
+.mwili .container{
+    width: 100%;
+    height: inherit;
+    
+}
+
+.mySlides {
+    display: none;
+    border: transparent;
+    height: inherit;
+    width: 100%;
+    
+}
+.mySlides img{
+    background-repeat: no-repeat;
+    object-fit: cover;
+    width: 100%;
+    height: inherit;
+    
+}
+img {
+    vertical-align: middle;
+}
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: none;
+    transition: background-color 0.6s ease;
+    
+}
+.active {
+    background-color: #717171;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: .1s;
+}
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+.kisigino{
+    position: absolute;
+    top: 5%;
+    border: 1px solid var(--accent);
+    background-color: var(--primaryLight);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.kichwa{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 10px 0 10px 0;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    padding: 10px;
+    border-bottom: 1px solid var(--accent);
+    position: fixed;
+    border: 1px solid var(--primaryLight);
+    background: transparent;
+}
+header .logo{
+    background: transparent;
+    padding: 5px;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+header .logo i{
+    margin-right: 10px;
+    background: transparent;
+}
+header .logo a{
+    background: transparent;
+}
+header .options{
+    background: transparent;
+    padding: 5px;
+}
+header .options a{
+    margin: 15px;
+    font-size: 15px;
+    border-right: 1px solid var(--accent);
+    border-left: 1px solid var(--accent);
+    padding: 5px;
+    background: transparent;
+}
+header .options i{
+    margin-right: 10px;
+    background: transparent;
+}
+header .options a:hover{
+    background-color: whitesmoke;
+    color: var(--primaryDark);
+}
+header .account{
+    border: 1px solid var(--accent);
+    padding: 5px;
+    background: transparent;
+}
+header .account a{
+    margin: 5px;
+    padding: 5px;
+    color: white;
+    text-transform: uppercase;
+    background: transparent;
+}
+header .account a:hover{
+    background-color: var(--accent);
+    color: #FFFFFF;
+}
+header .account i{
+    margin-right: 10px;
+    color: var(--text);
+    color: #FFFFFF;
+}
+header .account i:hover{
+    background-color: var(--accent);
+    color: #FFFFFF;
+}
